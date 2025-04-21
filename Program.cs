@@ -17,7 +17,7 @@ namespace ExercicioFixacao1 {
                 Console.WriteLine("$ Rent #{i}:");
 
                 Console.Write("Name: ");
-                string name = Console.ReadLine();
+                string name = Console.ReadLine(); 
 
                 Console.Write("E-mail: ");
                 string email = Console.ReadLine();
@@ -26,6 +26,15 @@ namespace ExercicioFixacao1 {
                 int room = int.Parse(Console.ReadLine());
                 vect[room] = new Student(name, email);
             }
+
+            if (vect[room] != null) {
+                Console.WriteLine("Room already occupied! Try another number");
+                i--;
+                continue;
+            }
+
+            vect[room] = new Student(name, emial);
+        }
 
             Console.WriteLine();
             Console.WriteLine("Occupied rooms: ");
