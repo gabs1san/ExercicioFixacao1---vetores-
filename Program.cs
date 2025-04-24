@@ -11,13 +11,13 @@ namespace ExercicioFixacao1 {
             Console.Write("How many rooms will be retend? = ");
             int n = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i <= n; i++) {
+            for (int i = 0; i < n; i++) {
 
                 Console.WriteLine();
-                Console.WriteLine("$ Rent #{i}:");
+                Console.WriteLine("$ Rent #" + i + ":");
 
                 Console.Write("Name: ");
-                string name = Console.ReadLine(); 
+                string name = Console.ReadLine();
 
                 Console.Write("E-mail: ");
                 string email = Console.ReadLine();
@@ -33,8 +33,7 @@ namespace ExercicioFixacao1 {
                 continue;
             }
 
-            vect[room] = new Student(name, emial);
-        }
+            vect[room] = new Student(name, email);
 
             Console.WriteLine();
             Console.WriteLine("Occupied rooms: ");
@@ -43,7 +42,7 @@ namespace ExercicioFixacao1 {
                     Console.WriteLine(i + ": " + vect[i]);
                 }
             }
-
         }
+
     }
 }
