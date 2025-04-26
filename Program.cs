@@ -8,7 +8,7 @@ namespace ExercicioFixacao1 {
             Student[] vect = new Student[10];
 
 
-            Console.Write("How many rooms will be retend? = ");
+            Console.Write("How many rooms will be retend?  ");
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < n; i++) {
@@ -27,13 +27,8 @@ namespace ExercicioFixacao1 {
                 vect[room] = new Student(name, email);
             }
 
-            if (vect[room] != null) {
-                Console.WriteLine("Room already occupied! Try another number");
-                i--;
-                continue;
-            }
-
-            vect[room] = new Student(name, email);
+         
+            
 
             Console.WriteLine();
             Console.WriteLine("Occupied rooms: ");
@@ -42,6 +37,9 @@ namespace ExercicioFixacao1 {
                     Console.WriteLine(i + ": " + vect[i]);
                 }
             }
+
+            Console.WriteLine("\nPress to any key to exit...");
+            Console.ReadKey();
         }
 
     }
